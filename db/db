@@ -1,0 +1,5 @@
+import sqlite3 as sq
+with sqlite3.connect("db/database.db") as db:
+    cursor = db.cursor()
+    query = """ CREATE TABLE IF NOT EXISTS book(id INTEGER, name TEXT, date DATE, time TIME)"""
+    cursor.execute(query)
